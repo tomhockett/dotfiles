@@ -37,6 +37,8 @@ autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
 " === Theme setup ===
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 colorscheme molokai
 syntax enable
@@ -150,7 +152,7 @@ call plug#end()
 let ruby_spellcheck_strings = 1
 
 " airline
-let g:airline_theme='jellybeans'
+let g:airline_theme='molokai'
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#gutentags#enabled = 0
