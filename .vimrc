@@ -37,9 +37,10 @@ autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
 " === Theme setup ===
+set termguicolors
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors
+set background=dark
 colorscheme molokai
 syntax enable
 
@@ -94,16 +95,7 @@ nmap <leader>' :Marks<CR>
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gg :Gbrowse<CR>
 nmap <leader>gs :Gstatus<CR>
-nmap <leader>gc :Gcommit<CR>
 
-" ranger
-map <leader>rr :RangerEdit<CR>
-map <leader>rv :RangerVSplit<CR>
-map <leader>rs :RangerSplit<CR>
-map <leader>rt :RangerTab<CR>
-map <leader>ri :RangerInsert<CR>
-map <leader>ra :RangerAppend<CR>
-map <leader>rc :set operatorfunc=RangerChangeOperator<CR>g@
 
 " undotree
 nnoremap <leader>u :UndotreeToggle<CR>
@@ -128,7 +120,6 @@ Plug 'machakann/vim-sandwich'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'rafaqz/ranger.vim'
 Plug 'raimondi/delimitmate'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'rizzatti/dash.vim'
@@ -140,6 +131,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-liquid'
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
