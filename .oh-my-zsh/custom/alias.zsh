@@ -1,6 +1,7 @@
 # system
 alias cat='bat --paging=never'
-alias top='sudo htop'
+alias top='vtop'
+alias oldtop="/usr/bin/top"
 alias help='tldr'
 alias vim='nvim'
 
