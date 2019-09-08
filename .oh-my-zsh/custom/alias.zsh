@@ -31,6 +31,9 @@ alias rr="rails routes"
 alias rs="rails s"
 alias rgm="rails generate migration"
 
+# shpotify
+alias sf="spotify"
+
 # tmux
 alias mux="tmuxinator"
 
