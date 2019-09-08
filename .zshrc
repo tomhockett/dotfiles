@@ -23,7 +23,10 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git iterm2 macports man composer zsh-syntax-highlighting zsh-autosuggestions bundler osx rake rvm ruby)
+plugins=(git iterm2 macports man composer zsh-syntax-highlighting zsh-autosuggestions bundler osx rake rvm ruby tmux)
+
+# Tmux plugin settings
+ZSH_TMUX_AUTOSTART=true
 
 # Sourse files
 source $ZSH/oh-my-zsh.sh
