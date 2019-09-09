@@ -26,7 +26,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git iterm2 macports man composer zsh-syntax-highlighting zsh-autosuggestions bundler osx rake rvm ruby tmux)
 
 # Tmux plugin settings
-ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOSTART=true
 
 # Sourse files
 source $ZSH/oh-my-zsh.sh
