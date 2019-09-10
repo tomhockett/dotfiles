@@ -40,7 +40,7 @@ source $HOME/.bin/tmuxinator.zsh
 [[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
 
 # Colorls tab completion.
-source $(dirname $(gem which colorls))/tab_complete.sh
+#source $(dirname $(gem which colorls))/tab_complete.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
