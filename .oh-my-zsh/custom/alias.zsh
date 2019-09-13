@@ -32,7 +32,7 @@ alias rs="rails s"
 alias rgm="rails generate migration"
 
 # shpotify
-alias sf="spotify"
+alias sp="spotify"
 
 # tmux
 alias mux="tmuxinator"
