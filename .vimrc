@@ -108,6 +108,7 @@ Plug 'alvan/vim-closetag'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elzr/vim-json'
 Plug 'hail2u/vim-css3-syntax'
+Plug 'jiangmiao/auto-pairs'
 Plug 'joker1007/vim-ruby-heredoc-syntax'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -123,8 +124,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'raimondi/delimitmate'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'rizzatti/dash.vim'
-Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -137,6 +138,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " === Plugin Settings ===
