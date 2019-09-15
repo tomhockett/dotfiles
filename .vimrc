@@ -108,11 +108,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'luochen1990/rainbow'
+Plug 'chriskempson/base16-vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-sandwich'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
-Plug 'morhetz/gruvbox'
 Plug 'mxw/vim-jsx'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'othree/html5.vim', { 'for': 'html' }
@@ -146,7 +146,7 @@ if exists('+termguicolors')
 endif
 let g:gruvbox_italic=1
 set background=dark
-colorscheme gruvbox
+colorscheme base16-gruvbox-dark-hard
 syntax enable
 
 " === Plugin Settings ===
@@ -154,7 +154,7 @@ syntax enable
 let ruby_spellcheck_strings = 1
 
 " airline
-let g:airline_theme='gruvbox'
+let g:airline_theme='base16'
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#gutentags#enabled = 0
