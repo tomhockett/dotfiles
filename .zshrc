@@ -33,8 +33,14 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.most.sh
 source $HOME/.bin/tmuxinator.zsh
 
-# Pure prompt system init
+# === Pure prompt ==
 autoload -U promptinit; promptinit
+
+# change the colors
+zstyle :prompt:pure:path color 081
+zstyle :prompt:pure:prompt color 211
+zstyle :prompt:pure:git:arrow color 112
+zstyle :prompt:pure:git:branch color 242
 prompt pure
 
 # Path for z integration
