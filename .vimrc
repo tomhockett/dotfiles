@@ -36,14 +36,6 @@ set listchars=tab:￫\ ,trail:·,extends:»,precedes:«,nbsp:␣
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
-" === Theme setup ===
-set termguicolors
-let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-set background=dark
-colorscheme molokai
-syntax enable
-
 " === Keybindings ===
 let mapleader=" "
 
@@ -106,8 +98,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'RRethy/vim-hexokinase'
 Plug 'alvan/vim-closetag'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'elzr/vim-json'
-Plug 'hail2u/vim-css3-syntax'
+Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'joker1007/vim-ruby-heredoc-syntax'
 Plug 'jremmen/vim-ripgrep'
@@ -120,7 +112,11 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-sandwich'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+Plug 'morhetz/gruvbox'
+Plug 'mxw/vim-jsx'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'raimondi/delimitmate'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'rizzatti/dash.vim'
@@ -142,12 +138,21 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
 call plug#end()
 
+" === Theme setup ===
+set termguicolors
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+let g:gruvbox_italic=1
+set background=dark
+colorscheme gruvbox
+syntax enable
+
 " === Plugin Settings ===
 " ruby
 let ruby_spellcheck_strings = 1
 
 " airline
-let g:airline_theme='molokai'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#gutentags#enabled = 0
@@ -164,7 +169,6 @@ let g:ale_warn_about_trailing_blank_lines = 1
 let g:ale_warn_about_trailing_whitespace = 1
 let g:ale_set_highlights = 0
 let g:ale_set_signs = 1
-let g:ale_fix_on_save = 1
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '✻'
 
@@ -185,12 +189,17 @@ let g:Hexokinase_ftAutoload = ['css', 'scss']
 let g:ale_linters = {
 \   'ruby': ['standardrb', 'rubocop'],
 \   'javascript': ['eslint'],
+\   'vue': ['eslint']
 \}
 
 " set ale fixers.
 let g:ale_fixers = {
 \    'ruby': ['standardrb'],
+\    'javascript': ['eslint'],
+\    'vue': ['eslint'],
+\    'scss': ['prettier']
 \}
+let g:ale_fix_on_save = 1
 
 " disable for specific files.
 let g:ale_pattern_options = {
