@@ -124,7 +124,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'raimondi/delimitmate'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'rizzatti/dash.vim'
+Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
+Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
@@ -138,7 +140,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
-Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " === Plugin Settings ===
@@ -163,6 +164,7 @@ let g:ale_warn_about_trailing_blank_lines = 1
 let g:ale_warn_about_trailing_whitespace = 1
 let g:ale_set_highlights = 0
 let g:ale_set_signs = 1
+let g:ale_fix_on_save = 1
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '✻'
 
@@ -181,8 +183,13 @@ let g:Hexokinase_ftAutoload = ['css', 'scss']
 
 " set specific linters.
 let g:ale_linters = {
+\   'ruby': ['standardrb', 'rubocop'],
 \   'javascript': ['eslint'],
-\   'ruby': ['rubocop'],
+\}
+
+" set ale fixers.
+let g:ale_fixers = {
+\    'ruby': ['standardrb'],
 \}
 
 " disable for specific files.
