@@ -113,10 +113,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-sandwich'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
-Plug 'mxw/vim-jsx'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'othree/html5.vim', { 'for': 'html' }
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'raimondi/delimitmate'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'rizzatti/dash.vim'
