@@ -97,6 +97,7 @@ nnoremap <leader>u :UndotreeToggle<CR>
 call plug#begin('~/.config/nvim/plugged')
 Plug 'RRethy/vim-hexokinase'
 Plug 'alvan/vim-closetag'
+Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
@@ -108,7 +109,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'luochen1990/rainbow'
-Plug 'chriskempson/base16-vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-sandwich'
 Plug 'mattn/emmet-vim'
@@ -120,6 +120,7 @@ Plug 'rizzatti/dash.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'slim-template/vim-slim'
+Plug 'stephpy/vim-yaml'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
