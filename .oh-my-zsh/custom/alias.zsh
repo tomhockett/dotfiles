@@ -39,3 +39,5 @@ alias mux="tmuxinator"
 
 # arux
 alias sc="script/console"
+alias scpro="script/console production"
+alias scl="script/console ledger"
