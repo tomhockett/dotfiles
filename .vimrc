@@ -49,6 +49,13 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" tabs
+map <leader>tn :tabnew<cr>
+map <leader>t<leader> :tabnext
+map <leader>tm :tabmove
+map <leader>tc :tabclose<cr>
+map <leader>to :tabonly<cr>
+
 " clear highlight
 nnoremap <silent> <C-n> :nohl<CR>
 
@@ -152,7 +159,7 @@ syntax enable
 let ruby_spellcheck_strings = 1
 
 " airline
-let g:airline_theme='base16'
+let g:airline_theme='molokai'
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#gutentags#enabled = 0
