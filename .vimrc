@@ -149,6 +149,7 @@ if exists('+termguicolors')
   let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 endif
+
 let g:gruvbox_italic=1
 set background=dark
 colorscheme base16-gruvbox-dark-hard
