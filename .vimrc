@@ -28,11 +28,6 @@ set shiftround
 set shiftwidth=2
 set softtabstop=2
 
-" black hole deletion
-nnoremap <leader>d "_d
-xnoremap <leader>d "_d
-xnoremap <leader>p "_dP
-
 " show invisibles
 set list
 set listchars=tab:￫\ ,trail:·,extends:»,precedes:«,nbsp:␣
