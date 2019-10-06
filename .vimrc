@@ -58,6 +58,9 @@ map <leader>tm :tabmove
 map <leader>tc :tabclose<cr>
 map <leader>to :tabonly<cr>
 
+" terminal
+tnoremap <C-\> <C-\><C-n>
+
 " clear highlight
 nnoremap <silent> <C-n> :nohl<CR>
 
@@ -130,6 +133,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'slim-template/vim-slim'
 Plug 'stephpy/vim-yaml'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-eunuch'
