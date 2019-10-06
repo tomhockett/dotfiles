@@ -43,11 +43,13 @@ let mapleader=" "
 inoremap jj <esc>
 inoremap jk <esc>
 
-" easy navigation between split windows.
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" split window navigation.
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+set splitbelow
+set splitright
 
 " tabs
 map <leader>tn :tabnew<cr>
@@ -102,7 +104,7 @@ nnoremap <leader>u :UndotreeToggle<CR>
 " === Plugins ===
 " install with :PlugInstall.
 call plug#begin('~/.config/nvim/plugged')
-Plug 'RRethy/vim-hexokinase'
+Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'alvan/vim-closetag'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -160,7 +162,7 @@ syntax enable
 let ruby_spellcheck_strings = 1
 
 " airline
-let g:airline_theme='molokai'
+let g:airline_theme='bubblegum'
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#gutentags#enabled = 0
@@ -191,7 +193,7 @@ let g:gitgutter_sign_removed_first_line = '▸'
 let g:gitgutter_sign_modified_removed = '▸'
 
 " hexokinase
-let g:Hexokinase_ftAutoload = ['css', 'scss']
+let g:Hexokinase_ftAutoload = ['html', 'css', 'scss', 'sass', 'javascript']
 
 " set specific linters.
 let g:ale_linters = {
