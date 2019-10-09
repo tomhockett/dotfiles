@@ -7,6 +7,7 @@ set fillchars+=vert:│
 set mouse=a
 set nofoldenable
 set noshowmode
+set nowrap
 set shortmess=tIF
 set wildmenu
 
