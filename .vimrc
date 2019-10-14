@@ -22,7 +22,7 @@ set ignorecase
 set showmatch
 set smartcase
 
-" tab settings
+" tab-key settings
 set autoindent
 set expandtab
 set shiftround
