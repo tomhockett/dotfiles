@@ -87,6 +87,9 @@ serveSSL () {
 # Set dotfiles alias here cause it gets wonky if it's in custom folder.
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+# Path for mysql
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+
 # Path for yarn.
 export PATH="$PATH:/usr/local/Cellar/yarn/1.15.2/bin"
 export PATH="$PATH:`yarn global bin`"
