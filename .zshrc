@@ -26,10 +26,10 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git iterm2 macports man composer zsh-syntax-highlighting zsh-autosuggestions bundler osx rake rvm ruby tmux)
 
-# Tmux plugin settings
+# Tmux plugin settings.
 # ZSH_TMUX_AUTOSTART=true
 
-# Sourse all the files
+# Sourse all the files.
 for file in $HOME/.oh-my-zsh/custom/*.zsh; do
   source $file
 done
@@ -40,14 +40,14 @@ source $HOME/.bin/tmuxinator.zsh
 # === Pure prompt ==
 autoload -U promptinit; promptinit
 
-# change the colors
+# change the colors.
 zstyle :prompt:pure:path color 081
 zstyle :prompt:pure:prompt color 211
 zstyle :prompt:pure:git:arrow color 112
 zstyle :prompt:pure:git:branch color 242
 prompt pure
 
-# Path for z integration
+# Path for z integration.
 . /usr/local/etc/profile.d/z.sh
 
 # Path for nvm && bash completion.
@@ -56,7 +56,7 @@ prompt pure
 # Colorls tab completion.
 #source $(dirname $(gem which colorls))/tab_complete.sh
 
-# You may need to manually set your language environment
+# You may need to manually set your language environment.
 # export LANG=en_US.UTF-8
 
 # editor for local and remote sessions
