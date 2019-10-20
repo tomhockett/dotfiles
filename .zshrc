@@ -29,13 +29,15 @@ plugins=(git iterm2 macports man composer zsh-syntax-highlighting zsh-autosugges
 # Tmux plugin settings.
 # ZSH_TMUX_AUTOSTART=true
 
-# Sourse all the files.
-for file in $HOME/.oh-my-zsh/custom/*.zsh; do
-  source $file
-done
+# === Sourse files ===
+# for file in $HOME/.oh-my-zsh/custom/*.zsh; do
+#   source $file
+# done
+# source $HOME/.oh-my-zsh/custom/fzf.zsh
 source $ZSH/oh-my-zsh.sh
 source $HOME/.most.sh
 source $HOME/.bin/tmuxinator.zsh
+
 
 # === Pure prompt ==
 autoload -U promptinit; promptinit
