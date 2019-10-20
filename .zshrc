@@ -1,3 +1,8 @@
+# Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Set base terminal, with specific terminal for tmux
 export TERM=xterm-256color
 [ -n "$TMUX" ] && export TERM=screen-256color
@@ -9,7 +14,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME=""
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ZSH_DISABLE_COMPFIX=true
 
@@ -37,17 +42,6 @@ plugins=(git iterm2 macports man composer zsh-syntax-highlighting zsh-autosugges
 source $ZSH/oh-my-zsh.sh
 source $HOME/.most.sh
 source $HOME/.bin/tmuxinator.zsh
-
-
-# === Pure prompt ==
-autoload -U promptinit; promptinit
-
-# change the colors.
-zstyle :prompt:pure:path color 081
-zstyle :prompt:pure:prompt color 211
-zstyle :prompt:pure:git:arrow color 112
-zstyle :prompt:pure:git:branch color 242
-prompt pure
 
 # Path for z integration.
 . /usr/local/etc/profile.d/z.sh
@@ -109,3 +103,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
+(( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
