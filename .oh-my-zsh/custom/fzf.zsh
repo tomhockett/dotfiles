@@ -8,7 +8,7 @@ rg --files              \
    --smart-case
 '
 
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 export FZF_DEFAULT_OPTS='
 --bind ctrl-f:page-down,ctrl-b:page-up
