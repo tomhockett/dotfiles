@@ -168,7 +168,7 @@ syntax enable
 let ruby_spellcheck_strings = 1
 
 " airline
-let g:airline_theme='bubblegum'
+let g:airline_theme='base16'
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#gutentags#enabled = 0
