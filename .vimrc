@@ -88,7 +88,7 @@ nmap <leader>/ :BLines<cr>
 " fuzzy find an open buffer
 nmap <leader>b :Buffers<cr>
 " fuzzy find text in the working directory
-nmap <leader>r :Rg
+nmap <leader>r :Rg<Space>
 " fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
 nmap <leader>c :Commands<cr>
 " fuzzy find hisotry items
@@ -113,6 +113,7 @@ Plug 'alvan/vim-closetag'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elzr/vim-json', { 'for': 'json' }
+Plug 'rafaqz/ranger.vim'
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'joker1007/vim-ruby-heredoc-syntax'
@@ -178,6 +179,15 @@ let g:airline_section_y = ''
 
 " rainbow parenthesis
 let g:rainbow_active = 1
+
+" ranger
+map <leader>rr :RangerEdit<CR>
+map <leader>rv :RangerVSplit<CR>
+map <leader>rs :RangerSplit<CR>
+map <leader>rt :RangerTab<CR>
+map <leader>ri :RangerInsert<CR>
+map <leader>ra :RangerAppend<CR>
+map <leader>rc :set operatorfunc=RangerChangeOperator<CR>g@
 
 " ale
 let g:ale_sign_column_always = 1
