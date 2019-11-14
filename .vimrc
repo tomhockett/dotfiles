@@ -113,7 +113,6 @@ Plug 'alvan/vim-closetag'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elzr/vim-json', { 'for': 'json' }
-Plug 'rafaqz/ranger.vim'
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'joker1007/vim-ruby-heredoc-syntax'
