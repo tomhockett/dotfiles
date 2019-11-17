@@ -127,6 +127,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-sandwich'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'raimondi/delimitmate'
 Plug 'rizzatti/dash.vim'
@@ -160,7 +161,7 @@ endif
 
 let g:gruvbox_italic=1
 set background=dark
-colorscheme base16-gruvbox-dark-hard
+colorscheme gruvbox
 syntax enable
 
 " === Plugin Settings ===
@@ -168,7 +169,7 @@ syntax enable
 let ruby_spellcheck_strings = 1
 
 " airline
-let g:airline_theme='base16'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#gutentags#enabled = 0
