@@ -22,6 +22,9 @@ alias gs="git status"
 alias gst="g stash"
 alias gl="g log"
 
+# ctags
+alias ctags="`brew --prefix`/bin/ctags"
+
 # bundler
 alias be="bundle exec"
 alias ber="be rake"

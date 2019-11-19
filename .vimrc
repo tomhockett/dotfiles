@@ -29,7 +29,10 @@ set shiftround
 set shiftwidth=2
 set softtabstop=2
 
-" show invisibles
+" ctags
+set tags=tags
+
+"show invisibles
 set list
 set listchars=tab:￫\ ,trail:·,extends:»,precedes:«,nbsp:␣
 
@@ -95,6 +98,9 @@ nmap <leader>c :Commands<cr>
 nmap <leader>h :History<CR>
 " fuzzy find Bookmarks
 nmap <leader>' :Marks<CR>
+" fuzzy find Tags
+nmap <leader>t :BTags<CR>
+nmap <leader>T :Tags<CR>
 
 " fugitive
 nmap <leader>gb :Gblame<CR>
@@ -122,6 +128,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'luochen1990/rainbow'
 Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-sandwich'
@@ -160,6 +167,7 @@ if exists('+termguicolors')
 endif
 
 let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark='hard'
 set background=dark
 colorscheme gruvbox
 syntax enable
