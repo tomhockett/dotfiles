@@ -12,3 +12,7 @@
 
 # === TCE ===
 ~/Arux/tce/vendor/plugins/acts_as_solr/server/solr
+
+# === tags ===
+tags
+tags.*
