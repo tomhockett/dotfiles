@@ -43,7 +43,7 @@ autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 " === Keybindings ===
 let mapleader=" "
 
-" type `jj` or `jk` in Insert mode to toss you into normal mode.
+" type `jj` or `jk` in any mode to toss you into normal mode.
 inoremap jj <esc>
 inoremap jk <esc>
 
