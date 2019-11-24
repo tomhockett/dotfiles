@@ -32,9 +32,12 @@ set softtabstop=2
 " ctags
 set tags=tags
 
-"show invisibles
+" show invisibles
 set list
 set listchars=tab:￫\ ,trail:·,extends:»,precedes:«,nbsp:␣
+
+" disable auto-commenting on newline
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Auto file indentation for ruby and erb files.
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
