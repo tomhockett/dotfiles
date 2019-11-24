@@ -71,6 +71,9 @@ tnoremap <C-\> <C-\><C-n>
 " clear highlight
 nnoremap <silent> <C-n> :nohl<CR>
 
+" spell-check toggle is <leader> o
+map <leader>o :setlocal spell! spelllang=en_us<CR>
+
 " coc
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <silent> gd <Plug>(coc-definition)
