@@ -17,6 +17,10 @@ set number
 set numberwidth=2
 set relativenumber
 
+" syntax highlighting
+filetype plugin indent on
+syntax enable
+
 " searching
 set ignorecase
 set showmatch
@@ -35,9 +39,6 @@ set tags=tags
 " show invisibles
 set list
 set listchars=tab:￫\ ,trail:·,extends:»,precedes:«,nbsp:␣
-
-" disable auto-commenting on newline
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Auto file indentation for ruby and erb files.
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
@@ -176,7 +177,6 @@ let g:gruvbox_italic=1
 let g:gruvbox_contrast_dark='hard'
 set background=dark
 colorscheme gruvbox
-syntax enable
 
 " === Plugin Settings ===
 " ruby
