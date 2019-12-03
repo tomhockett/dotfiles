@@ -85,9 +85,6 @@ inoremap <silent><expr> <c-space> coc#refresh()
 nmap <silent> <leader>d <Plug>DashSearch
 
 " emmet
-let g:user_emmet_expandabbr_key = '<C-a>,'
-let g:user_emmet_install_global = 0
-autocmd FileType html,css,eruby EmmetInstall
 
 " fuzzyfinder
 nnoremap <C-p> :FZF<CR>
