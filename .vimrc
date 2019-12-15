@@ -84,8 +84,6 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " dash
 nmap <silent> <leader>d <Plug>DashSearch
 
-" emmet
-
 " fuzzyfinder
 nnoremap <C-p> :FZF<CR>
 " fuzzy find files in the working directory (where you launched Vim from)
