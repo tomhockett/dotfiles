@@ -59,7 +59,10 @@ nnoremap <C-h> <C-w><C-h>
 set splitbelow
 set splitright
 
-" tabs
+" double-space toggles between the last buffer and the current buffer.
+map <leader><leader> <C-^>
+
+"tabs
 map <leader>tn :tabnew<cr>
 map <leader>t<leader> :tabnext
 map <leader>tm :tabmove
