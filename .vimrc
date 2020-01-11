@@ -218,7 +218,7 @@ let g:gitgutter_sign_removed_first_line = '▸'
 let g:gitgutter_sign_modified_removed = '▸'
 
 " hexokinase
-let g:Hexokinase_ftAutoload = ['html', 'css', 'scss', 'sass', 'javascript']
+let g:Hexokinase_ftEnabled = ['html', 'css', 'scss', 'sass', 'javascript']
 
 " set specific linters.
 let g:ale_linters = {
