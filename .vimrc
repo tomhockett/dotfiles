@@ -119,6 +119,7 @@ nnoremap <leader>u :UndotreeToggle<CR>
 " === Plugins ===
 " install with :PlugInstall.
 call plug#begin('~/.config/nvim/plugged')
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'alvan/vim-closetag'
 Plug 'chriskempson/base16-vim'
