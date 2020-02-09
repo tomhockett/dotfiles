@@ -122,6 +122,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'alvan/vim-closetag'
+Plug 'bogado/file-line'
 Plug 'chrisbra/csv.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
