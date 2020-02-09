@@ -35,6 +35,16 @@ alias rr="rails routes"
 alias rs="rails s"
 alias rgm="rails generate migration"
 
+# database
+alias dbd="rails db:drop"
+alias dbc="rails db:create"
+alias dbm="rails db:migrate"
+alias dbmt="dbm RAILS_ENV=test"
+alias dbr="rails db:rollback"
+alias dbrt="dbr RAILS_ENV=test"
+alias dbs="rails db:seed"
+alias dbrb="dbd && dbc && dbm"
+
 # shpotify
 alias sp="spotify"
 
