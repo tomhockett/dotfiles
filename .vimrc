@@ -146,7 +146,6 @@ Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'raimondi/delimitmate'
 Plug 'rizzatti/dash.vim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'slim-template/vim-slim'
 Plug 'stephpy/vim-yaml'
@@ -165,6 +164,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
+" Devicons must be last loaded plugin
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " === Theme setup ===
