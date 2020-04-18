@@ -131,7 +131,7 @@ Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'joker1007/vim-ruby-heredoc-syntax'
 Plug 'jremmen/vim-ripgrep'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-line'
