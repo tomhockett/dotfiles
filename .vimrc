@@ -10,6 +10,7 @@ set noshowmode
 set nowrap
 set shortmess=tIF
 set wildmenu
+set inccommand=split
 
 " line numbers
 set cursorline
