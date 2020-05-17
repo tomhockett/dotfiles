@@ -123,6 +123,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'alvan/vim-closetag'
+Plug 'andymass/vim-tradewinds'
 Plug 'bogado/file-line'
 Plug 'chrisbra/csv.vim'
 Plug 'chriskempson/base16-vim'
@@ -196,6 +197,9 @@ let g:airline_section_y = ''
 
 " rainbow parenthesis
 let g:rainbow_active = 1
+
+" closetag
+let g:closetag_filetypes = 'html, eruby'
 
 " ranger
 map <leader>rr :RangerEdit<CR>
