@@ -165,6 +165,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'vimlab/split-term.vim'
 Plug 'w0rp/ale'
 " Devicons must be last loaded plugin
 Plug 'ryanoasis/vim-devicons'
