@@ -30,7 +30,7 @@ plugins=(git iterm2 macports man composer zsh-syntax-highlighting zsh-autosugges
 # Tmux plugin settings.
 # ZSH_TMUX_AUTOSTART=true
 
-# === Sourse files ===
+# === Source files ===
 # for file in $HOME/.oh-my-zsh/custom/*.zsh; do
 #   source $file
 # done
