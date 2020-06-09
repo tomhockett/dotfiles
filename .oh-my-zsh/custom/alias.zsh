@@ -48,6 +48,9 @@ alias dbrb="dbd && dbc && dbm"
 # shpotify
 alias sp="spotify"
 
+# homebrew
+alias brewup="brew update && brew upgrade && brew cleanup -s"
+
 # tmux
 alias mux="tmuxinator"
 
