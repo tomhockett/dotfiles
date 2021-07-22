@@ -38,7 +38,7 @@ nnoremap <Leader>wsd :action SplitHorizontally<CR>
 nnoremap <Leader>wsr :action SplitVertically<CR>
 
 " editor actions
-nnoremap <Leader>i :action ShowIntentionAction<CR>
+nnoremap <Leader>i :action ShowIntentionActions<CR>
 nnoremap <Leader>e :action ShowErrorDescription<CR>
 nnoremap <leader>b :action GotoRelated<cr>
 
