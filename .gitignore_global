@@ -1,4 +1,4 @@
-# === Logs and Databases ===
+ # === Logs and Databases ===
 *.log
 *.sql
 *.sqlite
@@ -9,9 +9,13 @@
 
 # === Ruby Mine ===
 .idea/
+.run/
+config/initializers/rubymine_passenger_debug.rb
 
 # === TCE ===
-~/Arux/tce/vendor/plugins/acts_as_solr/server/solr
+vendor/plugins/acts_as_solr/server/solr/development_collection/data/
+vendor/plugins/acts_as_solr/server/solr/development_online_collection/data/
+vendor/plugins/validates_email_format_of/
 
 # === tags ===
 tags

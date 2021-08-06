@@ -45,9 +45,6 @@ alias dbrt="dbr RAILS_ENV=test"
 alias dbs="rails db:seed"
 alias dbrb="dbd && dbc && dbm"
 
-# shpotify
-alias sp="spotify"
-
 # homebrew
 alias brewup="brew update && brew upgrade && brew cleanup -s"
 
@@ -58,4 +55,5 @@ alias mux="tmuxinator"
 alias sc="script/console"
 alias scpro="script/console production"
 alias scl="script/console ledger"
+alias scs="script/console staging"
 alias pp="be script/pull_production_db"

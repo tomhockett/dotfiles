@@ -11,6 +11,7 @@ set nowrap
 set shortmess=tIF
 set wildmenu
 set inccommand=split
+set sidescroll=1
 
 " line numbers
 set cursorline
@@ -109,10 +110,9 @@ nmap <leader>t :BTags<CR>
 nmap <leader>T :Tags<CR>
 
 " fugitive
-nmap <leader>gb :Gblame<CR>
+nmap <leader>gb :Git blame<CR>
 nmap <leader>gg :Gbrowse<CR>
 nmap <leader>gs :Gstatus<CR>
-
 
 " undotree
 nnoremap <leader>u :UndotreeToggle<CR>
@@ -139,16 +139,16 @@ Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'luochen1990/rainbow'
 Plug 'machakann/vim-highlightedyank'
 Plug 'machakann/vim-sandwich'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'raimondi/delimitmate'
 Plug 'rizzatti/dash.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'SirVer/ultisnips'
 Plug 'slim-template/vim-slim'
 Plug 'stephpy/vim-yaml'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -195,9 +195,6 @@ let g:airline#extensions#gutentags#enabled = 0
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_powerline_fonts = 1
 let g:airline_section_y = ''
-
-" rainbow parenthesis
-let g:rainbow_active = 1
 
 " closetag
 let g:closetag_filetypes = 'html, eruby'
@@ -258,6 +255,29 @@ let g:ale_pattern_options = {
 " only run linters named in ale_linters settings.
 let g:ale_linters_explicit = 1
 
+" vim sandwich erb support
+let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
+let g:sandwich#recipes += [
+      \   {
+      \     'buns':     ['<%= ', ' %>'],
+      \     'filetype': ['eruby'],
+      \     'input':    ['='],
+      \     'nesting':  1
+      \   },
+      \   {
+      \     'buns':     ['<% ', ' %>'],
+      \     'filetype': ['eruby'],
+      \     'input':    ['-'],
+      \     'nesting':  1
+      \   },
+      \   {
+      \     'buns':     ['<%# ', ' %>'],
+      \     'filetype': ['eruby'],
+      \     'input':    ['#'],
+      \     'nesting':  1
+      \   }
+      \ ]
+
 " === Functions ===
 function! DeleteTrailingWhitespace()
   exe "normal mz"
@@ -265,13 +285,30 @@ function! DeleteTrailingWhitespace()
   exe "normal `z"
 endfunction
 
+let g:coc_global_extensions = [
+  \'coc-css',
+  \'coc-emmet',
+  \'coc-html',
+  \'coc-json',
+  \'coc-snippets',
+  \'coc-solargraph',
+  \'coc-tsserver',
+  \'coc-yaml'
+\]
+let g:coc_snippet_next = '<tab>'
+let g:coc_snippet_prev = '<s-tab>'
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger = '<nop>'
+let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'my_snippets']
+
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1

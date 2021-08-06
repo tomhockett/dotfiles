@@ -24,6 +24,9 @@ set ignorecase
 set incsearch
 set smartcase
 
+" highlightedyank
+let g:highlightedyank_highlight_color="rgb(255,216,102,155)"
+
 " === Keybindings ===
 let mapleader=" "
 
@@ -36,6 +39,9 @@ nnoremap <Leader>mr :action MoveTabRight<CR>
 nnoremap <Leader>mt :action MoveEditorToOppositeTabGroup<CR>
 nnoremap <Leader>wsd :action SplitHorizontally<CR>
 nnoremap <Leader>wsr :action SplitVertically<CR>
+
+" focus terminal
+nnoremap <Leader>t :action ActivateTerminalToolWindow<CR>
 
 " editor actions
 nnoremap <Leader>i :action ShowIntentionActions<CR>
